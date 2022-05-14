@@ -1,0 +1,21 @@
+
+<html>
+	<head>
+		<title>Trabajando con eventos</title>
+		<script language="Javascript">
+			var n=0;
+			function cambiar() {
+				if (n%2==0)
+					imagen.src="imagenes/salamanca.jpg";
+				else 
+					imagen.src="imagenes/armas.jpg";
+				n++;
+			}
+		</script>
+	</head>
+	<body>
+		<!--onmouseover cuando pasas el raton sobre la imagen-->
+		<!--onmouseout cuando sacas el raton de encima de la imagen-->
+		<img src="imagenes/armas.jpg" id="imagen" onmouseover="cambiar()" onmouseout="cambiar()" height="150" width="150">
+	</body>
+</html>

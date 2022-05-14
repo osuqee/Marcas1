@@ -1,0 +1,37 @@
+
+<html>
+	<head>
+		<title>Moviendo OBJETOS</title>
+		<style type="text/css">
+			#circulo{position:absolute; left:100; top:200}
+			#cruz{position:absolute; left:500; top:400}
+		</style>
+		<script language="Javascript">
+			objeto = null;
+			relieve = 2;
+			function cargar() {
+				if (event.srcElement.tagName == "IMG") {
+					objeto = event.srcElement;
+					objeto.style.zIndex = relieve;
+					relieve++;
+				}
+			}
+			function mover() {
+				if (objeto != null) {
+					objeto.style.left = event.x-50;
+					objeto.style.top = event.y-50;
+				}
+			}
+			function soltar() {
+				objeto=null;
+			}
+		</script>
+	</head>
+	<body onmousedown="cargar()" onmousemove="mover(); event.returnValue=false" onmouseup="soltar()">
+		<!--onmouseup: tras arrastrar, al soltar.-->
+		<!--onmousedown: al clickar-->
+		<!--onmousemove: cuando se mueve el raton se produce el evento-->
+		<img id="cruz" src="imagenes/cruz.png" height=100>
+		<img id="circulo" src="imagenes/circulo.png" height=100>
+	</body>
+</html>

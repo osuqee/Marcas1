@@ -1,0 +1,18 @@
+
+<html>
+	<head>
+		<title>Elementos del objeto DOCUMENT</title>
+		<script language="javascript">
+			function mostrar() {
+				for (i=0; i<document.all.length; i++)
+					alert(document.all[i].tagName);
+				for (i=0; i<document.images.length; i++)
+					alert(document.images[i].src);
+			}
+		</script>
+	</head>
+	<body onload="mostrar()">
+		<img src="imagenes/cruz.png" height=100>
+		<img src="imagenes/circulo.png" height=100>
+	</body>
+</html>

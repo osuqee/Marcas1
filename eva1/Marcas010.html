@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<title>Cambiar de clase</title>
+		<style type="text/css">
+			.bloque1{position:absolute; width:300px; top:50px; left:20px; background-color:lemonchiffon}
+			.bloque2{position:absolute; width:300px; top:50px; left:400px; background-color: lightcoral}
+			<!-- con # para normbre con . clase-->
+		</style>
+		<script language="javascript">
+			function cambio(){
+				if (b1.className == "bloque1") {
+					b1.className = "bloque2";
+					b2.className = "bloque1";
+				}
+				else {
+					b1.className = "bloque1";
+					b2.className = "bloque2";
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="b1" class="bloque1">
+			<img src="imagenes/ansu.jpg" height="75">
+			En el futbol base del Barcelona marcan un punto de inflexion en la relacion de los canteranos cuando se convierten en cadetes. "Solo tiene que prestar atencion a las tribunas. Cuando son benjamines o alevines, los padres de todos los niños siempre estan juntos. Pero despues todo empieza a cambiar. Hay grupitos, hay celos... la competencia. Es lo que tiene el futbol profesional", explica Aureli Altimira, excoordinador de futbol 11 en la cantera azulgrana.
+		</div>
+		<div id="b2" class="bloque2">
+			<img src="imagenes/vinicius.jpg" height="75">
+			Vinicius de Olivera Junior (Brasil, 2000) es un jugador profesional de futbol- Se formo en las categorias inferioes del Flamengo y actualmente juega como delantero en el Real Madrid C.F. Ha ganado una Liga y un Mundial de Clubes con este equipo, y posee dos Campeonatos Sudamericanos con las selecciones brasileñas sub-15 y sub-17. Sigue todas las noticias de Vinicius Jr.
+		</div>
+		<input type="button" name="Intercambio" onclick="cambio()">
+	</body>
+</html>

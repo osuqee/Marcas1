@@ -1,0 +1,114 @@
+
+<html>
+	<head>
+		<title>Pagina de los numeros</title>
+		<style type="text/css">
+			div{position:absolute;}
+			.pregunta{position:absolute; width:300; height:200; left:150; top:80; border-width:6;border-color:lime;border-style:groove;}
+			h3{color:red; font-family:sans-serif; text-align:center; margin-top:5; margin-bottom:5;}
+			p{margin-left:10; margin-right:10; font-size:12pt;font-family:arial; font-weight:bold; text-align:justify;}
+			a{font-family:sans-serif; font-weight:bold; font-size:50; text-decoration:none;}
+			#cero{color:red;}
+			#uno{color:lime;}
+			#dos{color:blue;}
+			#tres{color:red;}
+			#cuatro{color:magenta;}
+			#cinco{color:blue;}
+			#seis{color:blue;}
+			#siete{color:magenta;}
+			#ocho{color:lime;}
+			#nueve{color:red;}
+		</style>
+		<script language="Javascript">
+			actual = 1;
+			var respuestas = [7,8,2,0];
+			var correctas = [0,0,0,0];
+			function pasar() {
+				if ((actual < 6) && ((event.key == 's') || (event.key == 'S'))) {
+					document.getElementById("pagina"+actual).style.visibility="hidden";
+					actual++;
+					document.getElementById("pagina"+actual).style.visibility="visible";
+				}
+				if ((actual > 1) && ((event.key == 'a') || (event.key == 'A'))) {
+					document.getElementById("pagina"+actual).style.visibility="hidden";
+					actual--;
+					document.getElementById("pagina"+actual).style.visibility="visible";
+				}
+			}
+			//No es igual que la función de clase pero funciona igual.
+			function cotejar(numero) {
+				if (numero == respuestas[actual-3]) {
+					correctas[actual-3] = 1;
+					alert("correcto");
+					comprobar();
+				}
+				// Codigo de clase:
+				/*if (numero == respuestas[actual-3]) {
+					correctas[actual-3] = 1;
+					i=0;
+					while ((i<correctas.length)&&(correctas[i] == 1))
+						i++;
+					if (i==4)
+						alert("Enhorabuena, has ganado");
+				}*/
+			}
+			function comprobar() {
+				if (correctas[0] && correctas[1] && correctas[2] && correctas[3])
+					alert("ENHORABUENA, HAS GANADO");
+			}
+		</script>
+	</head>
+	<body onkeypress="pasar()">
+		<div style="left:200;top:0">
+			<a href="" id="cero" onclick="cotejar(0); return false">0</a>
+		</div>
+		<div style="left:20;top:75">
+			<a href="" id="uno" onclick="cotejar(1); return false">1</a>
+		</div>
+		<div style="left:480;top:100">
+			<a href="" id="dos" onclick="cotejar(2); return false">2</a>
+		</div>
+		<div style="left:100;top:125">
+			<a href="" id="tres" onclick="cotejar(3); return false">3</a>
+		</div>
+		<div style="left:550;top:150">
+			<a href="" id="cuatro" onclick="cotejar(4); return false">4</a>
+		</div>
+		<div style="left:10;top:175">
+			<a href="" id="cinco" onclick="cotejar(5); return false">5</a>
+		</div>
+		<div style="left:475;top:200">
+			<a href="" id="seis" onclick="cotejar(6); return false">6</a>
+		</div>
+		<div style="left:100;top:225">
+			<a href="" id="siete" onclick="cotejar(7); return false">7</a>
+		</div>
+		<div style="left:25;top:250">
+			<a href="" id="ocho" onclick="cotejar(8); return false">8</a>
+		</div>
+		<div style="left:500;top:300">
+			<a href="" id="nueve" onclick="cotejar(9); return false">9</a>
+		</div>
+
+		<div id="pagina1" class="pregunta">
+			<h3>¿Bienvenido a la pagina de lso  numeros?</h3>
+			<p>Para cambiar de pagina, pulsa la tecla "s/S" para pasar a la siguiente y la tecla "a/A" para retroceder</p>
+		</div>
+		<div id="pagina2" class="pregunta" style="visibility:hidden">
+			<h3>Para entrar en la pagina de los numeros, tendras que averiguar las combinaciones de acceso</h3>
+			<p>Se formularan cuatro preguntas. Para hallar la combinacion de acceso, haz click sobre el numero que responda cada pregunta. Cuando tengas las cuatro, habras encontrado la <strong>clave</strong> de entrada.</p>
+		</div>
+		<div id="pagina3" class="pregunta" style="visibility:hidden">
+			<h3>Tengo 18 años, restale 3, despues suma 6 y por ultimo divide por 3. ¿Que cifra sale?</h3>
+		</div>
+		<div id="pagina4" class="pregunta" style="visibility:hidden">
+			<h3>Si cortas una manzana por la mitad, despues cortas cada mitad de nuevo y cada una de esas mitades de nuevo en dos. ¿Cuentos trozos de manzana tendrias?</h3>
+		</div>
+		<div id="pagina5" class="pregunta" style="visibility:hidden">
+			<h3>Igual que 16 es a hexadecimal y 8 a octal, este numero es a binario.</h3>
+		</div>
+		<div id="pagina6" class="pregunta" style="visibility:hidden">
+			<h3>Multiplicame o divideme, pero siempre sere yo. ¿Que numero soy?</h3>
+		</div>
+	</body>
+</html>

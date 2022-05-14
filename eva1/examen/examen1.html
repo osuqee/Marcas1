@@ -1,0 +1,47 @@
+
+<html>
+	<head>
+		<title>Tabla</title>
+		<script language="Javascript">
+			var color2 = "white";
+			function cambiar() {
+				//objeto = event.srcElement;
+				if (event.srcElement.className == "nval") {
+					//quitarías la instrucción de antes del if.
+					//objeto = event.srcElement.style.background;
+					color2 = event.srcElement.style.background;
+				} else {
+					event.srcElement.style.background = color2;
+				}
+			}
+		</script>
+	</head>
+	<body onclick="cambiar()">
+		<table border="10" align="center" width="70%" cellspacing="10" cellpadding="5" height="300">
+			<tr>
+				<td class="cel"></td>
+				<td class="val"></td>
+				<td class="val"></td>
+				<td class="val"></td>
+			</tr>
+			<tr>
+				<td class="val"></td>
+				<td class="val"></td>
+				<td class="val"></td>
+				<td class="val"></td>
+			</tr>
+			<tr>
+				<td class="val"></td>
+				<td class="val"></td>
+				<td class="val"></td>
+				<td class="val"></td>
+			</tr>
+			<tr>
+				<td id="c1" bgcolor="red" class="nval"></td>
+				<td id="c2" bgcolor="green" class="nval"></td>
+				<td id="c3" bgcolor="blue" class="nval"></td>
+				<td id="c4" bgcolor="black" class="nval"></td>
+			</tr>
+		</table>
+	</body>
+</html>

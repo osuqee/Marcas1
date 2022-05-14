@@ -1,0 +1,21 @@
+
+<html>
+	<head>
+		<title>Trabajando con eventos 2</title>
+		<script language="Javascript">
+			var n=0;
+			function cambiar() {
+				if (n%2==0)
+					imagen.src="imagenes/salamanca.jpg";
+				else 
+					imagen.src="imagenes/armas.jpg";
+				n++;
+			}
+		</script>
+	</head>
+	<body>
+		<img src="imagenes/armas.jpg" id="imagen" height="150" width="150">
+		<br><br>
+		<input type="button" value="Cambiar" onclick="cambiar()">
+	</body>
+</html>

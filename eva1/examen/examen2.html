@@ -1,0 +1,22 @@
+
+<html>
+	<head>
+		<title>Boton cuenta atrás</title>
+		<script language="Javascript">
+			var n=10;
+			function cuentaAtras() {
+				objeto.innerHTML = parseInt(n);
+				if (n > 0) {
+					n--;
+					setTimeout("cuentaAtras()",900);
+				} else
+					objeto.innerHTML = "<img src=imagenes/llamarada.png>";
+			}
+		</script>
+	</head>
+	<body>
+		<table border="2" width="50%" height="30%"><tr></tr><td id="objeto"></td></tr></table>
+		<br><br>
+		<input type="button" value="iniciar" onclick="cuentaAtras()">
+	</body>
+</html>

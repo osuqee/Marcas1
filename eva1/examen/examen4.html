@@ -1,0 +1,26 @@
+
+<html>
+	<head>
+		<title>4 imagenes</title>
+		<style type="text/css">
+			img{width: 150; position: absolute;}
+			#noval{top:700;}
+			#val{top:50;}
+		</style>
+		<script language="Javascript">
+			function cambiar() {
+				objeto = event.srcElement;
+				if (objeto.className == "val") {
+					objeto.className = "noval";
+				 } else if (objeto.className == "noval")
+					objeto.className = "val";
+			}
+		</script>
+	</head>
+	<body onclick="cambiar()">
+		<img src="imagenes/0.jpg" class="val">
+		<img src="imagenes/1.jpg" class="val" style="left:175;">
+		<img src="imagenes/2.jpg" class="val" style="left:350;">
+		<img src="imagenes/3.jpg" class="val" style="left:525;">
+	</body>
+</html>
