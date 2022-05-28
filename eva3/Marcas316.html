@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Canvas 10</title>
+        <script type="application/javascript">
+            function cargar(){
+                var db = openDatabase("MiBaseDatos","1.0","Comentario sobre BD",2 * 1024 * 1024);
+                db.transaction(function(tx){
+                    tx.executeSql("CREATE TABLE IF NOT EXISTS DATOS(codigo unique, nombre);");
+                    tx.executeSql("INSERT INTO DATOS (codigo, nombre) VALUES (1,'Jotaro')");
+                    tx.executeSql("INSERT INTO DATOS (codigo, nombre) VALUES (2,'Joseph')");
+                    
+                });
+            }
+        </script>
+    </head>
+    <body onload="cargar()">
+        
+    </body>
+</html>

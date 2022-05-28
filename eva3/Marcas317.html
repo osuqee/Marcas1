@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Leer datos SQLite</title>
+        <script type="application/javascript">
+             function leer() {                                                    //2^21
+                var db = openDatabase("MiBaseDatos", "1.0", "Comentario sobre BD", 2 * 1024 * 1024); //abrir una base de datos que exista o para crear una nueva
+                db.transaction(function(tx){ //lo que queramos hacer en la base de datos lo haremos en las siguientes lineas --> tx es BD
+                    //si pasases parámetro seria entre []
+                    tx.executeSql("SELECT * FROM DATOS", [], function(tx,resultados){
+                        var len = resultados.rows.length;
+                        var msg = "Numero de filas: " + len + "<br>";
+                        for (i = 0; i < len; i++){
+                            msg += "<p>" + resultados.rows.item(i).codigo + "-" + resultados.rows.item(i).nombre + "</p>";
+                        }
+                        estado.innerHTML = msg;
+                    });
+                });
+            }                                                                            
+        </script>
+    </head>
+<body onload = "leer()">
+    <div id="estado" name="estado"></div>
+</body>
+</html>
