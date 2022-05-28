@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Otro ejemplo de animacion</title>
+        <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+        <script language="javascript">
+            $(document).ready(function(){
+                $("body").keydown(function(event){
+                    if (String.fromCharCode(event.which) == 'A') {
+                        setInterval(function(){
+                            $("#capa0").animate({'font-size':"25pt",'opacity':'1'},3000,function(){
+                                $("#capa0").animate({'font-size':"5pt",'opacity':'0'},3000);
+                            });
+                        },6000);
+                    }
+                });
+            });
+            /*$(document).ready(
+                setInterval(function(){
+                $("div").animate({opacity:'0', fontSize:'0pt'},1000);
+                $("div").animate({opacity:'1', fontSize:'20pt'},1000);
+            }));*/
+        </script>
+    </head>
+    <body align="center">
+        <span style="opacity: 0; font-size: 5pt;" id="capa0">Capa en la que cambiamos el tamanyo y la opacidad</span>
+        <!--<div style="text-align:center">Capa en la que cambiamos el tamanyo y la opacidad</div>-->
+    </body>
+</html>

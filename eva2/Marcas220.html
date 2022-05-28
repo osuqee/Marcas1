@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Estilos y persiana</title>
+        <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+        <script language="JavaScript">                                                                    
+            $(document).ready(function() {
+                $("#caja").css({
+                                width: "250px",
+                                height: "15px",
+                                backgroundColor: "azure",
+                                borderStyle: "solid",
+                                borderWidth: "3px",
+                                fontFamily: "Verdana",
+                                padding: "20px",
+                                fontSize: "14px",
+                                textAlign: "center",
+                                color: "blue"
+                });   
+                $("#boton").click(function(){
+                    $("#caja").slideUp(2000,function(){
+                        $("#caja").slideDown(2000);
+                    });
+                }); 
+            });   
+        </script>
+    </head>
+<body>
+    <input type="button" id="boton" value="Empezar">
+    <div id="caja">Bienvenidos al aula de 1H</div>
+</html>

@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Ejercicio 1</title>
+        <script type="text/javascript" src="jquery-1.11.2.min.js"></script>
+        <script language="JavaScript">
+            $(document).ready(function(){
+                $("#recoger").click(function(event){
+                    $("#rectangulo").slideUp(2000);
+                });
+                $("#mover").click(function(event){
+                    $("#rectangulo").animate({left:'200px'},"slow");
+                });
+                $("#cambiarcolor").click(function(event){
+                    $("#rectangulo").css("background-color","#ff0");
+                    
+                });
+                $("#desaparecer").click(function(event){
+                    $("#rectangulo").fadeOut(2000);
+                });
+                $("#ocultar").click(function(event){
+                    $("#rectangulo").hide(2000);
+                });
+                $("#ocultarymostrar").click(function(event){
+                    $("#rectangulo").hide(2000);
+                    $("#rectangulo").show(2000);
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <input type="button" id="recoger" value="Recoge persiana">
+        <input type="button" id="mover" value="Mover derecha">
+        <input type="button" id="cambiarcolor" value="Cambia color">
+        <input type="button" id="desaparecer" value="Opacidad desaparece">
+        <input type="button" id="ocultar" value="Ocultar rectangulo">
+        <input type="button" id="ocultarymostrar" value="Ocultar y mostrar">
+        <div id="rectangulo" style="height:100px; width:200px; background-color:#98fb21; position:absolute;"></div>
+    </body>
+</html>

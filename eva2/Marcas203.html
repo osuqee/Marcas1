@@ -1,0 +1,37 @@
+<!--Cambiar los 500000 por 5000.-->
+
+<html>
+    <head>
+        <title>Animacion de fondo</title>
+        <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+        <script language="Javascript">
+            $(document).ready(function(){
+                $("#mover1").click(function(event){
+                    // Primer param funcion 'animate' es un vector.
+                    // backgroundPositionX con su valor indica la posición final del objeto que quieres animar.
+                    $("body").animate({backgroundPositionX:"500000px"},10000);
+                    $("body").animate({backgroundPositionY:"500000px"},10000);
+
+                });
+                $("#mover2").click(function(event){
+                    $("body").animate({backgroundPositionX:"0px"},10000);
+                    $("body").animate({backgroundPositionY:"0px"},10000);
+                });
+                $("#mover3").click(function(event){
+                    $("body").animate({backgroundPositionX:"500000px"},10000,"swing",function(){
+                        alert(":C");
+                    });
+                });
+                $("#mover4").click(function(event){
+                    $("body").animate({backgroundPositionX:"10000px",backgroundPositionY:"10000px"},60000);
+                });
+            });          
+        </script>
+    </head>
+    <body background="imagenes/fondo.jpg">
+        <input type="button" id="mover1" value="Desplazar a la derecha">
+        <input type="button" id="mover2" value="Desplazar a la posicion inicial">
+        <input type="button" id="mover3" value="Desplazar con mensaje final">
+        <input type="button" id="mover4" value=";}">
+    </body>
+</html>

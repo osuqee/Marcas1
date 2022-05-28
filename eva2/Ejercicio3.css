@@ -1,0 +1,24 @@
+.panel:hover{
+    animation: animacion ease 3s forwards;
+    
+}
+@keyframes animacion {
+    0%{
+        background-color: green;
+    }
+    50%{
+        top: -20px;
+        background-color: greenyellow;
+        transform: rotateY(0deg);
+    }
+    100%{
+        top: -20px;
+        background-color: yellow;
+        transform: rotateY(180deg);
+    }
+}
+.back{
+    position: absolute;
+    top: 20px;
+    transform: rotateY(180deg) translateZ(100px);
+}

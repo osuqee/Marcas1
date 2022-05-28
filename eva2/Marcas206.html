@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>Eventos de raton 2</title>
+        <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+        <script language="Javascript">
+            $(document).ready(function(){
+                // recibe el objeto event e
+                $(document).on("mousemove",function(e){
+                    $("#divCoordenadas").html("<strong>"+e.pageX+"</strong> - <strong>"+e.pageY+"</strong>");
+                });
+                $(document).on("contextmenu",function(e){
+                    e.preventDefault();
+                    $("#divEstado").html("<strong>Click derecho</strong>");
+                });
+                $(document).on("click",function(e){
+                    $("#divEstado").html("<strong>Click izquierdo</strong>");
+                });
+                // lo detecta cuando usas la barra de scroll en el divScroll
+                $("#divScroll").on("scroll",function(e){
+                    $("#divEstado").html("<strong>Scroll detectado</strong>");
+                });
+            });
+        </script>
+        <style>
+            #divCoordenadas{border:1px solid #ccc; padding:10px; width:200px; text-align:center; border-radius:5px; box-shadow:1px 1px 10px #c0c0c0; float:left;}
+            #divEstado{padding:10px; width:200px;text-align:center;border-radius:5px; box-shadow:1px 1px 10px; float:right;}
+            #divScroll{margin:20px; padding:10px; border-radius:10px; box-shadow:1px 1px 10px rgb(188, 225, 255); float:right; height:100px; overflow-y:scroll;}
+        </style>
+    </head>
+    <body>
+        <div id="divCoordenadas"></div>
+        <div id="divEstado"></div>
+        <div id="divScroll">
+            <p>
+                Ecco2K. Zak Arogundade Gaterud, better known by his stage name Ecco2K, is a British-Swedish singer, designer, model, director and member of Drain Gang from Hornstull, Stockholm. Known for his experimental and innovative songwriting, he has also been celebrated for his directorial and design endeavours at the brand Eytys as well as for his own ...
+            </p>
+            <p>
+                Benjamin Reichwald (born 9 April 1994), known professionally as Bladee (pronounced "blade" or "blade ee"), is a Swedish rapper, singer, songwriter, record producer, designer and member of the artistic collective Drain Gang.. He released his debut album Eversince in 2016, and his second album Red Light in 2018—both through Stockholm record label YEAR0001.
+            </p>
+            <p>
+                Yung Lean - Wikipedia Yung Lean From Wikipedia, the free encyclopedia Jonatan Aron Leandoer Håstad (born July 18, 1996), known professionally as Yung Lean, is a Swedish rapper, singer and songwriter. Widely cited as one of the most influential figures in the early cloud rap era, Yung Lean was born in Minsk and raised in Stockholm.
+            </p>
+            <p>
+                parrafo4
+            </p>
+            <p>
+                sentse5
+            </p>
+        </div>
+    </body>
+</html>

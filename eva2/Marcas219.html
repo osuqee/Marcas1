@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Mostrar y ocultar con JQuery</title>
+        <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+        <script language="JavaScript">                                                                    
+            $(document).ready(function() {
+                $("#ocultar").click(function(){
+                    $("#boton").hide(2000);
+                    $(".imagen").hide(2000);
+                });
+                $("#mostrar").click(function(){
+                    $("#boton").show(2000);
+                    $(".imagen").show(2000);
+                });
+                $("#boton").click(function(){
+                    $(".imagen").toggle(2000);
+                });
+            });   
+        </script>
+    </head>
+<body>
+    <input type="button" id="boton" value="Boton aparece y desaparece">
+    <img src="imagenes/fondo.jpg" class="imagen" height=200>
+    <br><br><br><br>
+    <input type="button" id="mostrar" value="click para mostrar elementos">
+    <br><br><br><br>
+    <input type="button" id="ocultar" value="click para ocultar elementos">
+</html>

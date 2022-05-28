@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Definir un objeto</title>
+        <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+        <script language="Javascript">
+            // haciendo click en la imagen se abre el ejercicio anterior.
+            var imagen = $("<img>",{src:"imagenes/1.jpg",id:"imagen",css:{"padding":"2px","cursor":"pointer","height":"200px"},click:function(e){document.location="Marcas212.html"}});
+            $(document).ready(function(){
+                $("#boton").click(function(){
+                    $("body").append(imagen);
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <input type="button" id="boton" value="Anadir">
+    </body>
+</html>

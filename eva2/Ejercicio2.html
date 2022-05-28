@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Ejercicio 2</title>
+        <script type="text/javascript" src="jquery-1.11.2.min.js"></script>
+        <script language="JavaScript">
+            $(document).ready(function(){
+                $("#negro div:gt(0)").hide();
+                setInterval(function(){
+                    $("#negro div:first-child").fadeOut("slow").next("div").fadeIn(1000).end().appendTo("#negro");
+                },5000);
+            });
+        </script>
+    </head>
+    <body>
+        <div id="negro" style="height:800px; width:300px; background-color:#000; position:absolute;">
+            <div id="rojo" style="height:250px; width:250px; top: 20px; left: 30px; background-color:#F00; position:absolute;"></div>
+            <div id="amarillo" style="height:250px; width:250px; top: 280px; left: 30px; background-color:#FF0; position:absolute;"></div>
+            <div id="verde" style="height:250px; width:250px; top: 540px; left: 30px; background-color:#0F0; position:absolute;"></div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>Anadir botones, metodo Append</title>
+        <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+        <script language="Javascript">
+            $(document).ready(function(){
+                $("#divAsistente1").append($("<input>").attr("type","button").attr("value","Hola").attr("class","boton"));
+                $("#divAsistente2").append($("<button>").attr("class","boton").text("Probando"));
+            });
+        </script>
+    </head>
+    <body>
+        <div id="divAsistente1"></div>
+        <div id="divAsistente2"></div>
+    </body>
+</html>

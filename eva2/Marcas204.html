@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Animacion de borde</title>
+        <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+        <script language="Javascript">
+            $(document).ready(function(){
+                $("#mover1").click(function(){ 
+                    $("#capa0").animate({outlineWidth:"15px"});
+                });
+                $("#mover2").click(function(){ 
+                    $("#capa0").animate({outlineWidth:"15px"},3000);
+                });
+            });
+            
+        </script>
+    </head>
+    <body>
+        <!--span hace que respete los espacios en blanco extra y saltos de linea que html no respeta-->
+        <span style="outline:1px solid black;" id="capa0">Capa en la que cambiamos la propiedad outline</span>
+        <br><br><br>
+        <input type="button" id="mover1" value="Desplazar a la derecha">
+        <input type="button" id="mover2" value="Desplazar a la posicion inicial">
+        
+    </body>
+</html>
